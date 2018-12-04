@@ -1,0 +1,3 @@
+*.ls.js
+/src/ide.html
+/node_modules

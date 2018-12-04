@@ -1,0 +1,16 @@
+{
+  "name": "Sindarin.GradualTyping",
+  "version": "0.0.1",
+  "main": "src/ide.html",
+  "window": {
+    "title": "My Tiny IDE"
+  },
+  "dependencies": {
+    "fibers": "^2.0.0",
+    "angular": "^1.7.5",
+    "ngstorage": "^0.3.11",
+    "livescript": "^1.6.0",
+    "prelude-ls": "^1.1.2",
+    "codemirror": "^5.42.0"
+  }
+}

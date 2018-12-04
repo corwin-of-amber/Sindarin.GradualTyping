@@ -1,0 +1,19 @@
+Compiling fibers for nwjs seems to be a rather complicated task due to some compatbility issues.
+
+Here are the steps that works last time (tested on macOS High Sierra):
+
+```
+% sudo port select --set python python27
+% cd node_modules/fibers
+% nw-gyp configure --target=0.30.2
+% nw-gyp build --target=0.30.2
+% mkdir -p bin/darwin-x64-nnn && cp build/Release/fibers.node bin/darwin-x64-nnn
+```
+
+Where nnn is the module version (process.versions.modules in nwjs).
+
+Notes:
+ 1. If `nw-gyp` is not installed, install it with `npm i -g nw-gyp`.
+ 2. `nw-gyp` has a `--python=` flag but it was not enough due to 
+    https://github.com/nwjs/nw-gyp/issues/122.
+    (of course, the default Python should be restored after you finish.)
